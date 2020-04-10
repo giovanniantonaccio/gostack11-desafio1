@@ -59,7 +59,7 @@ app.delete("/repositories/:id", (request, response) => {
   if(index < 0) 
     return response.status(400).json({ error: 'ID does not exist'})
   
-  repositories.splice(index, 2);
+  repositories.splice(index, 1);
 
   return response.status(204).send();
 });
